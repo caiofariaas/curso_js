@@ -10,11 +10,11 @@ const catalogo = [{
 },
 
 {
-id: 2, 
-nomeProd: "Air max plus Tn' Chargers",
-descProd: " bla",
-precoProd: 295.00,
-imgProd: "./image/ferramentas/esmeril.jpeg"
+    id: 2, 
+    nomeProd: "Air max plus Tn' Chargers",
+    descProd: " bla",
+    precoProd: 295.00,
+    imgProd: "./image/ferramentas/esmeril.jpeg"
 },
 
 {
@@ -22,7 +22,7 @@ imgProd: "./image/ferramentas/esmeril.jpeg"
     nomeProd: "Air max plus 95 Neon'",
     descProd: " bla",
     precoProd: 330.00,
-    imgProd: "./image/ferramentas/martelo.jpeg"
+    imgProd: "./image/ferramentas/parafusadeira.jpeg"
 },
 
 {
@@ -30,7 +30,7 @@ imgProd: "./image/ferramentas/esmeril.jpeg"
     nomeProd: "Air max plus Tn' Triple Black",
     descProd: " bl",
     precoProd: 295.00,
-    imgProd: "./image/ferramentas/motor_eletrico.jpeg"
+    imgProd: "./image/ferramentas/parafusadeira.jpeg"
 },
 
 {
@@ -38,7 +38,7 @@ imgProd: "./image/ferramentas/esmeril.jpeg"
     nomeProd: "Air Force 1'07 White",
     descProd: " bl",
     precoProd: 295.00,
-    imgProd: "./image/ferramentas/kit1.jpeg"
+    imgProd: "./image/ferramentas/parafusadeira.jpeg"
 },
 
 {
@@ -52,15 +52,25 @@ imgProd: "./image/ferramentas/esmeril.jpeg"
 
 
 function mostrarProd(){
-   let prod = catalogo[0]
+    const catalogoContainer = document.getElementById('home_product_grid');
 
-    // html do produto deve estar entre Crases ' ` '
+    for(let i = 0; i < catalogo.length; i++){
+        let prod = catalogo[i]
 
-   let cardProd = `  <div class="product_card">
-   <a href="produto1.html">
-       <img class="product_image" src="./image/ferramentas/martelo.jpg">
-   </a>
-    </div>`
+            // html do produto deve estar entre Crases ' ` '
 
-   console.log(`O produto de id ${prod.id} esta nomeado como ${prod.nomeProd} e custa ${prod.precoProd}`)
+        let cardProd = `
+        <div class="product_card">
+            <a href="produto${prod.id}.html">
+                <img class="product_image" src="${prod.imgProd}" alt="${prod.nomeProd}">
+                <h3>${prod.nomeProd}</h3>
+                <p>${prod.descProd}</p>
+                <p>Preço: R$ ${prod.precoProd.toFixed(2)}</p>
+            </a>
+        </div>`;
+
+        home_product_grid.innerHTML += cardProd;
+
+        console.log(`O produto de id ${prod.id} esta nomeado como ${prod.nomeProd} e custa ${prod.precoProd}`)
+    }
 }
