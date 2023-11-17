@@ -18,8 +18,10 @@ console.log(contador);
 // NaN = not a number
 // conversão de String para números
 // parseFloat, parseInt ( igual as demais linguagens )
+// Tambem é possivel utilizar o 'Number'
 
 const num23 = 10;
 const num24 = parseFloat('5.5');
+const num25 = Number('4');
 
 console.log(num23 + num24);

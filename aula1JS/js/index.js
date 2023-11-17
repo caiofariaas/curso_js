@@ -11,7 +11,7 @@ let imc;
 imc = peso/(altura*altura)
 
 // Função toFixed é usada para formatar numeros, o valor inserido é a quantidade de números após a virgula
-// Forma ideal!
+// Forma ideal, é chamada de Template String!
 
 console.log(`Seu nome é ${nome} você tem ${idade} anos e seu imc é ${imc.toFixed(2)}`);
 
