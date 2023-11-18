@@ -51,6 +51,3 @@ console.log(umaString.slice(3, 8))
 
 console.log(umaString.toLowerCase());
 console.log(umaString.toUpperCase());
-
-
-

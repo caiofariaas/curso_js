@@ -1,0 +1,1 @@
+## Conhecendo coisas novas e começando o curso!

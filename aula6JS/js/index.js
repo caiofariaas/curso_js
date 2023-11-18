@@ -59,4 +59,31 @@ console.log(arredondar);
 arredondar = Math.round(num23);
 console.log(arredondar);
 
+// Retornar o maior e o menor número dentre uma lista!
+// Math.max() e Math.min()
+// '...' é um operador usado para espalhar os elementos do array como parametros para a função!
 
+let lista = [2,5,6,45,345,6346,6456456];
+
+console.log(Math.max(...lista));
+console.log(Math.min(...lista));
+
+// Sorteio de número aleatório!
+// Math.random()
+// A função Math.random() sorteia um valor entre 0 e 1!
+// Para sortearmos um número aleatório presente em uma lista, será necessario primeiro sortear um indice! e após sortear o indice busca-lo no array.
+// Desta forma conseguimos sortear um valor presente em uma lista!
+
+let indiceAleatório = Math.floor(Math.random() * lista.length);
+console.log(lista[indiceAleatório]);
+
+// Pi em JS
+
+Math.PI
+
+// Números elevados a outros
+// Math.pow() espera o numero principal e a qual deseja eleva-lo
+// 2 ** 10, desta forma temos o mesmo funcionamento!
+
+console.log(Math.pow(2, 10));
+console.log(2 ** 10);
