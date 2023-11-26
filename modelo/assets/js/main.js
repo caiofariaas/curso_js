@@ -4,15 +4,19 @@ const form = document.querySelector('#formulario')
 
 form.addEventListener('submit', function(e){
     e.preventDefault();
-    console.log("asas")
-    setResult("olá mundo")
+    const inputPeso = e.target.querySelector('#peso');
+    const inputAltura = e.target.querySelector('#altura');
+    
+    const peso = Number(inputPeso.value)
+    const altura = Number(inputAltura.value)
+
+    console.log(peso, altura);
+
 });
 
-function setResult(msg){
-    const result = document.querySelector('#result')
-    result.innerHTML = '';
-
-    // result.innerHTML = `<p>${msg}</p>`;
+function criaP(className){
+    
+// result.innerHTML = `<p>${msg}</p>`;
 
 // Cria um elemento HTML, sem a necessidade de usar o método acima
 
@@ -20,9 +24,18 @@ function setResult(msg){
 
 // Adiciona uma classe a tag  P criada
 
-    p.classList.add('paragrafoResult')
-    p.innerHTML = msg;
+    p.classList.add(className)
 
+    return p;
+}
+
+function setResult(msg){
+    const result = document.querySelector('#result')
+    result.innerHTML = '';
+
+    const p = criaP('paragrafoResult');
+
+    p.innerHTML(msg);
 // Adiciona o elemento ao HTML, como um elemento filho
 
     result.appendChild(p);
