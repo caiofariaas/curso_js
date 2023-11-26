@@ -6,13 +6,25 @@ form.addEventListener('submit', function(e){
     e.preventDefault();
     const inputPeso = e.target.querySelector('#peso');
     const inputAltura = e.target.querySelector('#altura');
-    
+
     const peso = Number(inputPeso.value)
     const altura = Number(inputAltura.value)
 
-    console.log(peso, altura);
+    if(!peso){
+        setResult('peso inválido', false);
+        return;
+    }
+    if(!altura){
+        setResult('Altura inválida', false);
+        return;
+    }
+
+    const imc = getImc(peso, altura);
+
+    console.log(imc);
 
 });
+
 
 function criaP(className){
     
@@ -29,15 +41,22 @@ function criaP(className){
     return p;
 }
 
-function setResult(msg){
+function setResult(msg, isValid){
     const result = document.querySelector('#result')
     result.innerHTML = '';
 
     const p = criaP('paragrafoResult');
+    p.innerHTML = msg
 
-    p.innerHTML(msg);
 // Adiciona o elemento ao HTML, como um elemento filho
 
     result.appendChild(p);
+}
+
+function getImc(peso, altura){
+
+    const IMC = peso / (altura * altura);
+
+    return IMC;
 }
 
