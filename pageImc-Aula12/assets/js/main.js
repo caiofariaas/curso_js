@@ -38,7 +38,7 @@ form.addEventListener('submit', function(e){
 
 // Seta o result com o IMC encontrado
 
-    setResult(`Seu IMC: ${imc}`, true);
+    setResult(`Seu IMC: ${imc} Resultado: ${getNivelImc(imc)}`, true);
 });
 
 
@@ -61,11 +61,10 @@ function criaP(){
 // recebe uma mensagem e um parametro "true or false'"
 
 function setResult(msg, isValid){
+
     const result = document.querySelector('#result')
     result.innerHTML = '';
-
     const p = criaP();
-
     p.innerHTML = msg;
 
 // Adiciona o elemento ao HTML, como um elemento filho
@@ -76,27 +75,21 @@ function setResult(msg, isValid){
 // função responsável por fazer o calculo do imc
 
 function getImc(peso, altura){
-
     const IMC = peso / (altura * altura);
-
     return IMC.toFixed(2);
 }
+
+// Retorna o nivel referente ao IMC
 
 function getNivelImc(imc){
     const nivel = ['Abaixo do peso', 'Peso normal', 'Sobrepeso', 
     'Obesidade Grau 1', 'Obesidade Grau 2', 'Obesidade Grau 3']
 
-    if (imc >= 40){
-        return nivel[5];
-    }
-    if (imc >= 35){
-        return nivel[4];
-    }
-    if (imc >= 30){
-        return nivel[3];
-    }
-    if (imc >=25){
-        
-    }
-
+    if (imc >= 40) return nivel[5];
+    if (imc >= 35) return nivel[4];
+    if (imc >= 30) return nivel[3];
+    if (imc >=25) return nivel[2]
+    if(imc >=18.5)return nivel[1]
+    else return nivel[0]
+ 
 }
