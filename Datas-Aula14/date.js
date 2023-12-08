@@ -60,3 +60,24 @@ function zeroEsquerda(num){
 const dataBR = formataData(dataa);
 
 console.log(dataBR)
+
+
+// Retorna literalmente o dia da semana, por exemplo
+// quinta-feira, ele retornará 5
+// Segunda = 1, etc...
+
+let diaSemanaTexto;
+const dia = dataa.getDay();
+
+// Formatando dia para mostrar ao usuario
+
+if(diaSemanaTexto === 0) diaSemanaTexto = "Domingo";
+else if(dia === 1) diaSemanaTexto = "Segunda"
+else if(dia === 2) diaSemanaTexto = "Terça"
+else if(dia === 3) diaSemanaTexto = "Quarta"
+else if(dia === 4) diaSemanaTexto = "Quinta"
+else if(dia === 5) diaSemanaTexto = "Sexta"
+else if(dia === 6) diaSemanaTexto = "Sabado"
+
+
+console.log(diaSemanaTexto);
