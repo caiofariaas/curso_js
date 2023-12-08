@@ -47,7 +47,6 @@ form.addEventListener('submit', function(e){
 function criaP(){
     
 // result.innerHTML = `<p>${msg}</p>`;
-
 // Cria um elemento HTML, sem a necessidade de usar o método acima
 
     const p = document.createElement('p');
@@ -65,6 +64,17 @@ function setResult(msg, isValid){
     const result = document.querySelector('#result')
     result.innerHTML = '';
     const p = criaP();
+
+// Se a resposta for válida ele insere a Tag 'P' uma classe que possui uma estilização positiva
+// e se for inválida retorna uma classe negativa
+
+    if (isValid) {
+        p.classList.add('paragrafoResult');
+    }
+    else{
+        p.classList.add('bad');
+    }
+
     p.innerHTML = msg;
 
 // Adiciona o elemento ao HTML, como um elemento filho
@@ -75,7 +85,9 @@ function setResult(msg, isValid){
 // função responsável por fazer o calculo do imc
 
 function getImc(peso, altura){
+    
     const IMC = peso / (altura * altura);
+
     return IMC.toFixed(2);
 }
 
