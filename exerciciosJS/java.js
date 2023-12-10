@@ -17,9 +17,11 @@ function ehPrimo(num){
 
 function contarVogais(txt) {
     let contador = 0;
+
+    // percorre todos os caracteres do txt
   
     for (let i = 0; i < txt.length; i++) {
-        
+
       // Use txt.charAt(i) para obter o caractere na posição i
       // Use toUpperCase() para converter o caractere para maiúsculo
       // Includes verifica se existe no array indicado!
@@ -28,7 +30,6 @@ function contarVogais(txt) {
         contador++;
       }
     }
-  
     return contador;
   }
 
@@ -37,4 +38,4 @@ console.log(soma(23, 23));
 
 console.log(ehPrimo(2));
 
-console.log(contarVogais("AAA"));
+console.log(contarVogais("Hello World"));
