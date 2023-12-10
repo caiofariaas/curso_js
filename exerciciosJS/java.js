@@ -33,6 +33,24 @@ function contarVogais(txt) {
     return contador;
   }
 
+//  Função que espera um array e retorna a soma do quadrado dos números pares
+// ESTUDAR DNV
+
+const somaQuadradosPares = (numeros) => {
+
+//  'reduce' é usada para iterar sobre o array de 'numeros'
+
+
+    return numeros.reduce((soma, numero) => {
+
+      if (numero % 2 === 0) {
+        return soma + numero ** 2;
+      } 
+      else {
+        return soma;
+      }
+    }, 0);
+};
 
 console.log(soma(23, 23));
 
