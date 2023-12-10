@@ -37,7 +37,7 @@ function contarVogais(txt) {
 
 const somaQuadradosPares = (numeros) => {
 
-//  'reduce' é usada para iterar sobre o array de 'numeros'
+// 'reduce' é usada para iterar sobre o array de 'numeros'
 
     return numeros.reduce((soma, numero) => {
 
