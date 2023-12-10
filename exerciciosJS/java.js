@@ -52,7 +52,5 @@ const somaQuadradosPares = (numeros) => {
 };
 
 console.log(soma(23, 23));
-
 console.log(ehPrimo(2));
-
 console.log(contarVogais("Hello World"));
