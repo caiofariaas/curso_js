@@ -1,4 +1,3 @@
-
 function soma (a, b){
     return a + b;
 }
@@ -33,7 +32,7 @@ function contarVogais(txt) {
     return contador;
   }
 
-//  Função que espera um array e retorna a soma do quadrado dos números pares
+// Função que espera um array e retorna a soma do quadrado dos números pares
 // ESTUDAR DNV
 
 const somaQuadradosPares = (numeros) => {
