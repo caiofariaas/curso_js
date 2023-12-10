@@ -53,3 +53,38 @@ const somaQuadradosPares = (numeros) => {
 console.log(soma(23, 23));
 console.log(ehPrimo(2));
 console.log(contarVogais("Hello World"));
+
+
+// Utilizando a função 'map' para criar um novo array com o quadrado 
+// dos números de um array existente
+
+// o método map não modifica o array anterior, ele cria um novo!
+
+const numeros = [1,2,3,4,5];
+
+const quadrados = numeros.map((numero) =>{
+    return  numero ** 2;
+});
+
+console.log(quadrados);
+
+// Exemplo de 'map' com objetos
+// Pessoas é um array de objetos 'Pessoa'
+// Criamos um método 'map' que itera sob pessoas com um objeto
+// 'pessoa' (parametro)
+// o método map cria um array chamado 'nomes' que itera sob 'pessoas' e guarda apenas o nome delas nesse novo array! 
+
+const pessoas =[
+  {nome: 'João', idade: 25},
+  {nome: 'Maria', idade: 30},
+  {nome: 'Carlos', idade: 22}
+];
+
+const nomes = pessoas.map((pessoa) => {
+
+// O return dentro do método devolve para o proprio array!
+
+  return pessoa.nome;
+});
+
+console.log(nomes);
