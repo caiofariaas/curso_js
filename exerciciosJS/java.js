@@ -40,7 +40,6 @@ const somaQuadradosPares = (numeros) => {
 
 //  'reduce' é usada para iterar sobre o array de 'numeros'
 
-
     return numeros.reduce((soma, numero) => {
 
       if (numero % 2 === 0) {
