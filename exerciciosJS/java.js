@@ -88,3 +88,55 @@ const nomes = pessoas.map((pessoa) => {
 });
 
 console.log(nomes);
+
+// Método filter
+// ele filtra itens de um array tomando como base alguns critérios
+// Aqui estamos filtrando apenas os números pares de um Array de números 
+
+const arrayNumerico = [3,4,6,43,1,24,45,67,54,23,22];
+
+const filterPares = (list) =>{
+  return list.filter(obj => obj %2 === 0)
+}
+
+console.log(filterPares(arrayNumerico))
+
+// tambem é possivel filtrar objetos
+// Aqui estamos filtrando apenas os que possuem o preço maior ou igual a 2000
+
+let produtos = [
+  {nome: 'Notebook', preco:2300},
+  {nome: 'Celular', preco: 1500},
+  {nome: 'Tv', preco: 2000},
+  {nome: 'iPhone', preco: 1200}
+];
+
+const filtrarProdutos = (arrayObj) => {
+  return arrayObj.filter(prod => prod.preco >= 2000)
+}
+
+console.log(filtrarProdutos(produtos));
+
+// Tambem podemos usar para remover itens de um array de forma filtrada!
+// Aqui nós removemos os produtos que possuiam o valor < 2000
+// Para isso precisamos criar um novo array e depois reatribuir o valor ao array principal
+
+
+const removeItem = (array) => {
+  const newArray = array.filter(prod => prod.preco >=2000)
+  return newArray
+}
+
+// Antes
+
+console.log(produtos)
+
+// Usando a função
+
+const newArray = removeItem(produtos)
+
+produtos = newArray
+
+// Após
+
+console.log(produtos);
