@@ -1,3 +1,6 @@
+// Funções
+// Normais e Arrow Function
+
 function soma (a, b){
     return a + b;
 }
@@ -54,7 +57,7 @@ console.log(soma(23, 23));
 console.log(ehPrimo(2));
 console.log(contarVogais("Hello World"));
 
-
+// MAP
 // Utilizando a função 'map' para criar um novo array com o quadrado 
 // dos números de um array existente
 
@@ -89,6 +92,27 @@ const nomes = pessoas.map((pessoa) => {
 
 console.log(nomes);
 
+// Outro EX
+// Criamos um array que recebe um map do array de objetos 'empresas'
+// Uma manipulação que mostra o nome da empresa e o CEO da mesma
+
+let empresas = [
+  {nome: "Samsung", ceo: "Kim Hyun Suk", lastRelease: 2000},
+  {nome: "Microsoft", ceo: "Satya Nadella",lastRelease: 2000},
+  {nome: "Apple", ceo: "tim Cook", lastRelease: 2000}
+]
+
+const info = empresas.map(empresa => `${empresa.nome}` + ' CEO: '+`${empresa.ceo}`);
+console.log(info)
+
+// Filtrando apenas o nome das empresas
+
+const nomesEmpresas = empresas.map(empresa => empresa.nome);
+
+console.log(nomesEmpresas);
+
+
+// FILTER
 // Método filter
 // ele filtra itens de um array tomando como base alguns critérios
 // Aqui estamos filtrando apenas os números pares de um Array de números 
@@ -134,9 +158,10 @@ console.log(produtos)
 // Usando a função
 
 const newArray = removeItem(produtos)
-
 produtos = newArray
 
 // Após
 
 console.log(produtos);
+
+// REDUCE
