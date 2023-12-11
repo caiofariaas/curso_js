@@ -97,9 +97,9 @@ console.log(nomes);
 // Uma manipulação que mostra o nome da empresa e o CEO da mesma
 
 let empresas = [
-  {nome: "Samsung", ceo: "Kim Hyun Suk", lastRelease: 2000},
-  {nome: "Microsoft", ceo: "Satya Nadella",lastRelease: 2000},
-  {nome: "Apple", ceo: "tim Cook", lastRelease: 2000}
+  {nome: "Samsung", ceo: "Kim Hyun Suk", price: 2000},
+  {nome: "Microsoft", ceo: "Satya Nadella",price: 2000},
+  {nome: "Apple", ceo: "tim Cook", price: 2000}
 ]
 
 const info = empresas.map(empresa => `${empresa.nome}` + ' CEO: '+`${empresa.ceo}`);
@@ -165,3 +165,14 @@ produtos = newArray
 console.log(produtos);
 
 // REDUCE
+// o reduce passa por todos os valores dentro de um array aplicando uma expressão especifica
+// depois retorna um único valor
+// vamos usa-lo para mostrar o valor total de mercado das empresas
+// Recebe um valor acumulado (result) e um valor atual (preco)
+// passamos o 0 como argumento pois no primeiro lopping ele não acumularia nada, assim ele pegaria o Objeto, e o resultado estaria errado
+
+const totalEmpresas = empresas.reduce((result, preco) => {
+  return result + preco.price;
+},0);
+
+console.log(totalEmpresas)
