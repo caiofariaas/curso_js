@@ -1,6 +1,5 @@
 # projeto_learnJs
 ## Repositório criado em conjunto as Aulas do Luiz Otavio Miranda sobre JS & TS
-### Fique a vontade para estudar!
 ### Para melhor entendimento sugiro que acesse o curso do mesmo, aqui não tem tudo!
 
 
