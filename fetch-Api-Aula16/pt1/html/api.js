@@ -44,6 +44,25 @@ const fetchApi = (value) =>{
 // async indica que é uma função assincrona!
 // por estarmos recebendo um dado de uma API, isso é necessário
 
+const keys = ['name', 'status', 'species', 'gender', 'origin', 'image', 'episode'];
+
+const buildResult = (result) =>{
+
+// Criamos um objeto vazio
+
+    const newObject = {};
+
+// Array de getElement's
+// e depois um array de elementos selecionados
+// faz uma comparação e se ela for verdadeira ele muda o newObject
+
+    keys.map((key) => document.getElementById(key)).map((elem) =>{
+        elem.checked && (newObject[elem.name] = result[elem.name])
+    });
+
+    return newObject;
+}
+
 btnGo.addEventListener('click', async (e) =>{
     e.preventDefault()
     
@@ -55,7 +74,8 @@ btnGo.addEventListener('click', async (e) =>{
 // 'undefined' não sei
 // 2 para os espaços
 
-    content.innerHTML =  `${JSON.stringify(result, undefined, 2)}`;
-    
+    // content.innerHTML =  `${JSON.stringify(result, undefined, 2)}`;
+
+    content.innerHTML = `${JSON.stringify(buildResult(result), undefined, 2)}`;
     image.src = `${result.image}`
 });
