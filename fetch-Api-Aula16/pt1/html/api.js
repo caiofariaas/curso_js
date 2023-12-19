@@ -2,6 +2,8 @@ const characterId = document.querySelector("#characterId");
 const btnGo= document.querySelector("#btn-go");
 const content = document.querySelector("#content");
 const image = document.querySelector("#img");
+const btnReset = document.querySelector("#btn-reset");
+const containerResult = document.querySelector("#result-style");
 
 // Faz uma requisição na API atraves da função FETCH
 // recebe o ID do usuário
@@ -41,10 +43,7 @@ const fetchApi = (value) =>{
 
 // Usamos o EventListener para ler um click e com isso chamar a função de 'Fetch'
 
-// async indica que é uma função assincrona!
-// por estarmos recebendo um dado de uma API, isso é necessário
-
-const keys = ['name', 'status', 'species', 'gender', 'origin', 'image', 'episode'];
+const keys = ['name', 'status', 'species', 'gender', 'origin', 'episode'];
 
 const buildResult = (result) =>{
 
@@ -63,6 +62,9 @@ const buildResult = (result) =>{
     return newObject;
 }
 
+// async indica que é uma função assincrona!
+// por estarmos recebendo um dado de uma API, isso é necessário
+
 btnGo.addEventListener('click', async (e) =>{
     e.preventDefault()
     
@@ -78,4 +80,4 @@ btnGo.addEventListener('click', async (e) =>{
 
     content.innerHTML = `${JSON.stringify(buildResult(result), undefined, 2)}`;
     image.src = `${result.image}`
-});
+})

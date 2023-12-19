@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rick and Morty API</title>
     <script src="./api.js" defer></script>
-
 </head>
 <body>
     <form action="" method="get">
@@ -17,30 +16,41 @@
         <label for="name">Nome</label>
         <input type="checkbox" name="name" id="name">
 
+        <br>
+
         <label for="status">Status</label>
         <input type="checkbox" name="status" id="status">
+
+        <br>
 
         <label for="species">Especie</label>
         <input type="checkbox" name="species" id="species">
 
+        <br>
+
         <label for="gender">Genero</label>
         <input type="checkbox" name="gender" id="gender">
+        
+        <br>
 
         <label for="origin">Origem</label>
         <input type="checkbox" name="origin" id="origin">
 
-        <label for="image">Foto</label>
-        <input type="checkbox" name="image" id="image">
+        <br>
 
         <label for="episode">Episódios</label>
         <input type="checkbox" name="episode" id="episode">
-
         <hr>
-        <button id="btn-go">enviar</button>
+
+        <button type="submit" id="btn-go">Pesquisar</button>
+        <button type="submit" id="btn-reset">Limpar</button>
+
     </form>
 
-    <pre id="content"></pre>
-    <img src="" alt="" id="img">
-    
+    <div id="result-style">
+        <img src="" alt="" id="img">
+        <pre id="content"></pre>
+    </div>
+
 </body>
 </html>
